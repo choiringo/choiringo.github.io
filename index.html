@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 접속기기에 맞춰진 코드 -->
+    <title> 스마트스토어 </title>
+
+    <link href="https://hangeul.pstatic.net/hangeul_static/css/nanum-square.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+
+          *{  
+        box-sizing: border-box;  
+        margin: 0; 
+        font-family: 'NanumSquare';
+        }
+
+        ul{
+            list-style: none; padding: 0;
+        }
+
+        #ranking{  /* 섹션 영역 */
+            width: 95%; max-width: 1200px;
+            margin: 100px auto;
+        }
+
+        .sectionTitle {  /* h2, 주간 랭킹 */
+            font-size: 2em; margin: 1em 0;
+            text-align: center;
+            color: rgb(106, 29, 151);
+        }
+
+        #listBox{  /* ul */
+            display: grid;
+            grid-template-columns: repeat( 4, 1fr );
+            gap: 20px;
+        }
+
+        .imageBox{  /* div박스의 이미지 영역 */
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            position: relative;
+        }
+
+        .picture{  /* 상품 이미지 */
+            width: 100%; display: block;
+            transition: 0.3s;
+        }
+
+        .no{  /* 베스트 아이콘 이미지 */
+            position: absolute;
+            top: 0; left: 10px;
+            width: 15%;
+        }
+
+        .list:hover .picture {  
+            transform: scale( 1.05 );
+        }
+
+        .title{  /* h3, 상품 이름 */
+            margin-bottom: 10px;
+        }
+
+        .text{  /* p, 상품 설명 */
+            font-size: 0.9em; color: #333;
+            line-height: 1.5em;
+            margin-bottom: 20px;
+        }
+
+        .price{  /* h3, 할인 가격 */
+            font-size: 1.3em;
+            color: #c00;
+            display: inline-block; 
+        }
+
+        .price2{  /*p, 원래 가격 */
+            color: #999;
+            font-size: 0.9em;
+            text-decoration: line-through;  /* 중간 취소 선 */
+            display: inline-block; /* 그 줄에서 이어서 표시하기 */
+        }
+
+        .iconBox{  /* 아이콘이 담긴 div박스 */
+            position: absolute;
+            bottom: 10%; 
+            width: 100%;
+            text-align: center;
+            opacity: 0;  /* 안 보였다가 */
+        }
+
+        .icon{  /* 아이콘 */
+            color: #fff;
+            font-size: 2.2em;
+            margin: 0 5px;
+        }
+
+        .list:hover .iconBox {
+            opacity: 1;  /* 마우스가 닿으면 보임 */
+        }
+
+        /* 태블릿 화면용 스타일 (850px 이하 화면 폭) */
+        @media screen and (max-width:850px) { /* 스크린 장치이면서 최대가 850 이하 */
+            #listBox{  /* 달라질 내용만 작성하면 됨 */
+            grid-template-columns: repeat( 2, 1fr );  /* 850 이하에서는 두개로 구분 */ }
+        }
+
+        @media screen and (max-width:450px) { /* 450px 이하 화면 폭 */
+            #listBox{  
+            grid-template-columns: 1fr;  /* 450 이하에서는 한 개로 보여짐 */ }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <section id="ranking">
+
+        <h2 class="sectionTitle">
+            ☆ 주간 RANKING ☆
+        </h2>
+
+        <ul id="listBox">
+
+            <li class="list">
+
+               <div class="imageBox">
+                <img src="images/image1.jpg" alt="결혼식 하객 원피스" class="picture">
+                    <img src="images/flag.1.png" alt="베스트1" class="no">
+                    <div class="iconBox">
+                        <i class="fa-regular fa-heart icon"></i>
+                        <i class="fa-solid fa-circle-plus icon"></i>
+                    </div>
+               </div>
+
+               <h3 class="title"> [자체제작/당일발송] 셀레나 결혼식 하객 원피스 </h3>  <!-- 제품 이름 -->
+               <p class="text"> 여름에 단독으로 입기 좋은 두께감. 행사용으로도 많이 착용하는 디자인이라 사계절 내내 주문량이 많은 제품입니다. </p> <!-- 제품 설명 -->
+               <h3 class="price"> 84,000원 </h3>  <!-- 할인 가격 -->
+               <p class="price2"> 89,000원 </p>  <!-- 원래 가격 -->
+               
+            </li>
+
+            <li class="list">
+
+               <div class="imageBox">
+                <img src="images/image2.jpg" alt="결혼식 하객 원피스" class="picture">
+                    <img src="images/flag.2.png" alt="베스트1" class="no">
+                    <div class="iconBox">
+                        <i class="fa-regular fa-heart icon"></i>
+                        <i class="fa-solid fa-circle-plus icon"></i>
+                    </div>
+               </div>
+
+               <h3 class="title"> [자체제작/당일발송] 리즈 글램 스퀘어넥 원피스 </h3>  <!-- 제목 -->
+               <p class="text"> 이런 슬림한 핏의 원피스는 너무 꽉 조여서 불편했었는데, 스판끼가 좋은 원단으로 변경하여 입었을 때 편하다는게 가장 큰 장점이랍니다. </p>  <!-- 제품 설명 -->
+               <h3 class="price"> 39,700원 </h3>  <!-- 할인 가격 -->
+               <p class="price2"> 42,000원</p>  <!-- 원래 가격 -->
+
+            </li>
+
+            <li class="list">
+
+               <div class="imageBox">
+                <img src="images/image3.jpg" alt="결혼식 하객 원피스" class="picture">
+                    <img src="images/flag.3.png" alt="베스트1" class="no">
+                    <div class="iconBox">
+                        <i class="fa-regular fa-heart icon"></i>
+                        <i class="fa-solid fa-circle-plus icon"></i>
+                    </div>
+               </div>
+
+               <h3 class="title"> [자체제작] high quality 클래식 벨트 원피스 하객원피스 </h3>  <!-- 제목 -->
+               <p class="text"> 하객룩, 셀프웨딩룩, 돌잔치룩 등 각 종 중요한 행사에 입기 좋은 하이퀄리티 원피스. 백화점에 납품하는 공장에서 제작된 제품으로 원단 퀄리티, 색감, 디자인, 핏 모두 정말 완벽한 제품이에요.</p>  <!-- 제품 설명 -->
+               <h3 class="price"> 149,000원 </h3>  <!-- 할인 가격 -->
+               <p class="price2"> 152,000원 </p>  <!-- 원래 가격 -->
+
+            </li>
+
+            <li class="list">
+
+               <div class="imageBox">
+                <img src="images/image4.jpg" alt="결혼식 하객 원피스" class="picture">
+                    <img src="images/flag.4.png" alt="베스트1" class="no">
+                    <div class="iconBox">
+                        <i class="fa-regular fa-heart icon"></i>
+                        <i class="fa-solid fa-circle-plus icon"></i>
+                    </div>
+               </div>
+
+               <h3 class="title"> [모델강추/upgrade] 정말 편한 제이뷰 소가죽 H 슬리퍼 </h3>  <!-- 제목 -->
+               <p class="text"> 천연 소가죽 H 슬리퍼. 처음에는 사무실 피팅룸용으로 구입해왔는데 코디하면서 신어보니 여기저기 정말 잘어울려서 바로 같이 신고나가서 촬영한 신발입니다. </p>  <!-- 제품 설명 -->
+               <h3 class="price"> 44,000원</h3>  <!-- 할인 가격 -->
+               <p class="price2"> 46,000원 </p>  <!-- 원래 가격 -->
+
+            </li>
+
+        </ul>
+
+    </section>
+</body>
+
+</html>
