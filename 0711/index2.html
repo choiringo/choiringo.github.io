@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 별의 커비2 </title>
+
+    <!-- 폰트 연결 -->
+    <link href="https://fonts.googleapis.com/css?family=Jua:400" rel="stylesheet">
+    
+    <!-- 폰트어썸 연결 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- 파비콘 연결 -->
+    <link rel="shortcut icon" href="images/pavicon.png" type="image/x-icon">
+
+    <!--animate.css 연결-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <!-- 스타일시트 연결 -->
+    <link rel="stylesheet" href="style/index2.css">
+
+    <!-- 제이쿼리 라이브러리 연결(사용 준비) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+ 
+    <!-- jQuery easeScroll 플러그인 연결(부드러운 스크롤) -->
+    <script src="script/jquery.easeScroll.js"></script>
+
+    <!-- wow 플러그인 연결(스크롤 애니메이션 효과) -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>    
+
+    <!-- 스크립트 파일 연결 -->
+    <script src="script/index.js"></script>    
+
+</head>
+
+
+<body>
+    
+    <div id="naviBox">    <!--내비게이션 전체 박스-->
+    
+        <nav id="navi">   <!--안쪽 1200 내비게이션 공간-->
+            <div id="logoBox"><a href="index2.html"><img src="images/Nintendo-logo.png" alt="" id="logo"></a></div>
+    
+            <!-- 모바일용 햄버거 버튼 -->
+            <button class="hamburger hamburger--spin">
+                <i class="fa-solid fa-bars" id="hamburger"></i>
+            </button>
+    
+            <ul id="menu">
+                <li class="main"><a href="javascript:" class="mainLink">Home</a></li>
+                <li class="main"><a href="javascript:" class="mainLink">캐릭터</a></li>
+                <li class="main"><a href="javascript:" class="mainLink">News</a></li>
+            </ul>
+        </nav>
+    
+    </div>    <!--내비게이션 전체 박스 끝-->
+
+    <!-- 모바일 화면에서 메뉴 등장할 때 뒤 배경-->
+    <div id="blackBox"></div>    
+
+    <header id="header">  <!-- 헤더 -->
+
+        <ul id="slideBox">     <!--슬라이드 박스-->
+            <li class="slide"><img src="images/bg_img01.jpg" alt="슬라이드 이미지" class="slideImage"></li>
+            <li class="slide"><img src="images/bg_img02.jpg" alt="슬라이드 이미지" class="slideImage">
+                <div id="videoBox">
+                    <iframe class="youtube" width="640" height="360"  src="https://www.youtube.com/embed/88ArjXSdCiE?enablejsapi=1&version=2&playerapiid=ytplayer&controls=1&autoplay=0&mute=0&playsinline=1&loop=1&showinfo=0&rel=0&vq=hd1080&wmode=opaque&autohide=1&volume=0&playlist=88ArjXSdCiE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </li>
+        </ul>
+
+        <ul id="titleBox">  <!-- 타이틀 박스 -->
+            <li class="title">
+                <img src="images/kirby-logo.png" alt="kirby-logo" class=" logo animate__animated animate__bounceIn">
+                <p class="title1">빨아들이고, 뱉고, 카피하고, <br> 모두를 구하고, 낮잠을 자고, <br> 모두와 놀고, 다시 낮잠자고. </p>
+                <p class="title2"> 앞으로도 계속해서 부풀어오를<br> 커비의 "지금"을 이 페이지에서 확인할 수 있습니다.</p>
+                <a href=" # " class="button1"> 커비에 대해</a>
+            </li>
+
+            <li class="title">
+                <img src="images/kirby-logo.png" alt="kirby-logo" class=" logo animate__animated animate__bounceIn">
+                <p class="title1"> 별의 커비 디스커버리<br> Nintendo Switch 2 Edition<br> 스타리 월드 트레일러 </p>
+                <p class="title2"> 유성의 힘으로 변모한 신세계<br> 각지에 흩어진 유성 조각을 찾는<br> 커비의 새로운 모험이 시작됩니다.</p>
+                <a href=" # " class="button1"> 자세히 보기 </a>                
+            </li>
+        </ul>
+
+        <ul id="pagination">  <!-- 하단 페이지네이션 -->
+            <li class="page"></li>
+            <li class="page"></li>
+        </ul>
+
+        <!-- 좌우버튼 -->
+        <i class=" fa-solid fa-circle-chevron-left slideButton slideLeft "></i>
+        <i class=" fa-solid fa-circle-chevron-right slideButton slideRight "></i>
+
+    </header>  <!-- 헤더 끝 -->
+
+    <!-- 섹션 영역 -->
+    <section id="sec1">  <!-- 섹션 1 -->
+        
+        <h1 id="character"> 캐릭터 소개</h1>
+
+        <ul id="listBox1">
+            <li class="list">
+                <img src="images/seckirby.png" alt="kirby" class="wow flip-in-ver-right" data-wow-offset="200">
+            </li>
+
+            <li class="list">
+                <img src="images/secwaddledee.png" alt="waddledee" class="wow flip-in-ver-right" data-wow-offset="200" data-wow-delay="0.2s">
+            </li>
+
+            <li class="list">
+                <img src="images/secmataknight.png" alt="mataknight" class="wow flip-in-ver-right" data-wow-offset="200" data-wow-delay="0.4s">
+            </li>
+
+            <li class="list">
+                <img src="images/secdedede.png" alt="dedede" class="wow flip-in-ver-right" data-wow-offset="200" data-wow-delay="0.6s">
+            </li>
+        </ul>
+        
+        <div class="buttonBox">
+        <a href=" # " class="button2"> 더 보기 </a>
+        </div>
+
+    </section>  <!-- 섹션 1 끝 -->    
+
+    <!-- 섹션 2 영역 -->
+    <section id="sec2">
+        <h1 id="news"> ☆ News ☆ </h1>
+
+        <ul id="listBox2">
+
+            <li class="list2 wow flip-in-ver-right" data-wow-offset="200">
+                <img src="images/discovery2.jpg" alt="discovery2" >
+                <p> 2025. 05. 31</p>
+                <h3>Nintendo Switch 소프트웨어 「별의 커비 디스커버리」가
+                    새로운 스토리 「스타리 월드」와 함께 Nintendo Switch 2에 등장합니다.<br>
+                </h3>
+            </li>
+            
+            <li class="list2 wow flip-in-ver-right" data-wow-offset="200" data-wow-delay="0.2s">
+                <img src="images/airriders.png" alt="air riders" >
+                <p> 2025. 04. 03 </p>
+                <h3>원작의 재미를 계승, 더욱 업그레이드된 레이싱 경험<br>
+                    게임큐브 명작 레이싱 게임 '별의 커비 에어라이드' 후속작 닌텐도 스위치 2 독점 출시</h3>
+            </li>
+
+            <li class="list2 wow flip-in-ver-right" data-wow-offset="200" data-wow-delay="0.4s">
+                <img src="images/pop-up.png" alt="pop-up" >
+                <p> 2024. 09. 30</p>
+                <h3>「별의 커비 팝업 스토어 in DAEGU」<br>
+                 10월 14일(월) 오픈! 사전 예약도 시작되었습니다. </h3>
+            </li>
+
+        </ul>
+
+        <div class="buttonBox">
+        <a href=" # " class="button2"> 더 보기 </a>
+        </div>
+
+    </section>  <!-- 섹션 2 끝 -->    
+
+    <!-- 섹션 3 영역 -->
+    <section id="sec3">
+
+        <h1 id="game"> 「별의 커비」 시리즈 </h1>
+
+        <ul id="listBox3">
+
+            <li class="list3">
+                <img src="images/kirby_wii_deluxe.jpg" alt="kirby_wii_deluxe">
+            </li>
+
+            <li class="list3">
+                <img src="images/kirby_dream.jpg" alt="kirby_dream">
+            </li>
+
+            <li class="list3">
+                <img src="images/kirby_discovery.jpg" alt="kirby_discovery">
+            </li>
+        </ul>
+
+        <img class="inhale wow slide-in-fwd-left" data-wow-offset="200" data-wow-delay="0.3s" src="images/inhale.png" alt="inhale">
+        <img class="baddy wow slide-in-fwd-left" data-wow-offset="200" src="images/baddy-1.png" alt="baddy">
+
+        <div class="buttonBox">
+        <a href=" # " class="button2" id="button3"> 전체 소프트웨어 보기 </a>
+        </div>
+
+    </section> <!-- 섹션 3 끝 -->
+
+    <!-- 푸터 영역  -->
+
+    <footer id="footer">
+        <div id="line"></div>
+
+        <div id="footerBox">
+            <a href="index.html"><img src="images/커비.png" alt="logo" id="logo2"></a>
+            <p> 2025.06.13 @Designed By Ringo</p>
+        </div>
+
+    </footer>    
+    
+
+</body>
+
+ 
+
+</html>
